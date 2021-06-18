@@ -1,14 +1,14 @@
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:gym_passion_admin/navigation/navigation.dart';
 import 'package:gym_passion_admin/navigation/routes.dart';
-import 'package:gym_passion_admin/pages/admin_home_page.dart';
+import 'package:gym_passion_admin/pages/home_page.dart';
 import 'package:gym_passion_admin/pages/login_page.dart';
-import 'package:gym_passion_admin/pages/coach_reset_password_page.dart';
-import 'package:gym_passion_admin/pages/new_student_page.dart';
+import 'package:gym_passion_admin/pages/reset_password_page.dart';
+import 'package:gym_passion_admin/pages/students/new_student_page.dart';
 import 'package:gym_passion_admin/pages/register_payment_page.dart';
 import 'package:gym_passion_admin/pages/splash_page.dart';
-import 'package:gym_passion_admin/pages/student_details_page.dart';
-import 'package:gym_passion_admin/pages/students_page.dart';
+import 'package:gym_passion_admin/pages/students/student_details_page.dart';
+import 'package:gym_passion_admin/pages/students/students_page.dart';
 
 class AppModule extends Module {
   @override

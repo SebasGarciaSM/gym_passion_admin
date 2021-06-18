@@ -32,33 +32,37 @@ class _FilterStudentsDialogState extends State<FilterStudentsDialog> {
   }
 
   contentBox(context) {
-    return Stack(
-      children: <Widget>[
-        Center(
-          child: Container(
-            padding: EdgeInsets.all(20.0),
-            height: 290.0,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              shape: BoxShape.rectangle,
-              color: Color.fromRGBO(1, 156, 124, 1),
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  _title(),
-                  _coachSelection(),
-                  _classSelection(),
-                  SizedBox(height: 20.0),
-                  _goButton()
-                ],
+    return Container(
+      width: 344,
+      height: 232,
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(20.0),
+              height: 290.0,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                shape: BoxShape.rectangle,
+                color: Color.fromRGBO(1, 156, 124, 1),
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    _title(),
+                    _coachSelection(),
+                    _classSelection(),
+                    SizedBox(height: 20.0),
+                    _goButton()
+                  ],
+                ),
               ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 

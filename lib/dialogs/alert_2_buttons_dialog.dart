@@ -30,42 +30,46 @@ class Alert2ButtonsDialog extends StatelessWidget {
   }
 
   contentBox(context) {
-    return Stack(
-      children: <Widget>[
-        Center(
-          child: Container(
-            padding: EdgeInsets.all(30.0),
-            height: 290.0,
-            width: 270.0,
-            decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [ColorsGym.green, ColorsGym.cian]),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      offset: Offset(2, 3),
-                      blurRadius: 8),
-                ]),
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  _description(),
-                  SizedBox(height: 40),
-                  _yesButton(context),
-                  SizedBox(height: 20),
-                  _cancelButton(context)
-                ],
+    return Container(
+      height: 290.0,
+      width: 270.0,
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              height: 290.0,
+              width: 270.0,
+              decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [ColorsGym.green, ColorsGym.cian]),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        offset: Offset(2, 3),
+                        blurRadius: 8),
+                  ]),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    _description(),
+                    SizedBox(height: 40),
+                    _yesButton(context),
+                    SizedBox(height: 20),
+                    _cancelButton(context)
+                  ],
+                ),
               ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 

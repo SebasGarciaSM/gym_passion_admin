@@ -30,43 +30,47 @@ class Alert1ButtonDialog extends StatelessWidget {
   }
 
   contentBox(context) {
-    return Stack(
-      children: <Widget>[
-        Center(
-          child: Container(
-            padding: EdgeInsets.all(30.0),
-            height: 224.0,
-            width: 270.0,
-            decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                gradient: LinearGradient(
-                    begin: Alignment.bottomLeft,
-                    end: Alignment.topRight,
-                    colors: [
-                      Color.fromRGBO(0, 159, 0, 1),
-                      Color.fromRGBO(1, 156, 124, 1)
-                    ]),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0),
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black.withOpacity(0.3),
-                      offset: Offset(2, 3),
-                      blurRadius: 8),
-                ]),
-            child: Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  _description(),
-                  SizedBox(height: 40),
-                  _okButton()
-                ],
+    return Container(
+      height: 224.0,
+      width: 270.0,
+      child: Stack(
+        children: <Widget>[
+          Center(
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              height: 224.0,
+              width: 270.0,
+              decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  gradient: LinearGradient(
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        Color.fromRGBO(0, 159, 0, 1),
+                        Color.fromRGBO(1, 156, 124, 1)
+                      ]),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(10.0),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black.withOpacity(0.3),
+                        offset: Offset(2, 3),
+                        blurRadius: 8),
+                  ]),
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    _description(),
+                    SizedBox(height: 40),
+                    _okButton()
+                  ],
+                ),
               ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 
